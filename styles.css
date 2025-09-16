@@ -49,6 +49,8 @@ h3 {
     margin-top: 30px;
 }
 
+
+
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -61,6 +63,14 @@ a:hover {
 
 strong {
     color: #111;
+}
+
+
+.logo {
+    display: block;
+    margin: 0 auto 15px; /* Centers the logo and adds space below it */
+    max-height: 80px; /* Controls the size of the logo */
+    width: auto; /* Maintains the aspect ratio */
 }
 
 /* Table of Contents */
