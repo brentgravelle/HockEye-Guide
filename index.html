@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTracker User Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>GameTracker User Guide 🏒</h1>
+            <p class="intro">Welcome! This guide will walk you through everything you need to know to accurately track game events and provide valuable data for your team.</p>
+        </header>
+
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#settings">Important First Step: Team Settings</a></li>
+                <li><a href="#setup">Part 1: Pre-Game Setup</a></li>
+                <li><a href="#interface">Part 2: The Tracking Interface</a></li>
+                <li><a href="#tracking">Part 3: How to Track Events</a></li>
+                <li><a href="#managing">Part 4: Managing a Game in Progress</a></li>
+                <li><a href="#post-game">Part 5: After the Game</a></li>
+                <li><a href="#strategies">Part 6: Strategies for Effective Tracking</a></li>
+                <li><a href="#glossary">Glossary of Terms</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="settings">
+                <h2>Important First Step: Team Management Settings</h2>
+                <p>Before you start tracking, it's crucial to understand that the features available within GameTracker are controlled by the <strong>Team Management</strong> settings. Your team owner can decide which events to track (e.g., Hits, Blocks, Assists). If you don't see an option for an action, it's likely disabled in the team settings.</p>
+                
+                <div class="screenshot-placeholder">
+                    <img src="images/GTSettings.png" alt="A screenshot showing the Team Management settings page with toggles for tracked actions.">
+                    <span>Team Management Settings</span>
+                </div>
+            </section>
+            
+            <section id="setup">
+                <h2>Part 1: Pre-Game Setup</h2>
+                <p>Follow these steps before the puck drops to ensure a smooth tracking experience.</p>
+                
+                <h3>1. Select Your Game</h3>
+                <p>From the main dropdown menu, choose the game you are about to track. Only games that have <strong>not</strong> been finalized will appear here.</p>
+                <div class="screenshot-placeholder">
+                    <img src="images/SelectGame.png"  alt="A screenshot of the game selection dropdown menu.">
+                    <span>Game Selection Dropdown</span>
+                </div>
+
+                <h3>2. Set the Game Roster (Mandatory)</h3>
+                <p>When you select a game for the first time, a <strong>Roster Setup</strong> screen will appear. You can select primary and affiliate players. Click <strong>"Set Roster"</strong> to confirm.</p>
+                <div class="tip-box">
+                    <strong>Note:</strong> You can add players to the roster mid-game, but you <strong>cannot remove</strong> them. This must be done by the account owner.
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="images/SetGameRoster.png"  alt="A screenshot of the Roster Setup screen with player jerseys.">
+                    <span>Roster Setup Screen</span>
+                </div>
+                
+                <h3>3. Select the Starting Goalie (Mandatory)</h3>
+                <p>After the roster is set, you must select the starting goalie or "Empty Net". Tracking cannot begin until a goalie is selected.</p>
+                <div class="screenshot-placeholder">
+                    <img src="images/SetGoalie.png"  alt="A screenshot of the goalie selection popup.">
+                    <span>Goalie Selection</span>
+                </div>
+
+                <h3>4. Select the Period</h3>
+                <p>Choose the starting period (usually "1") from the period selector buttons. You are now ready to track!</p>
+            </section>
+
+            <section id="interface">
+                <h2>Part 2: The Tracking Interface</h2>
+                <p>The main screen consists of three key areas: the Rink, the Controls, and the Events List.</p>
+				
+				 <div class="tip-box">
+					<strong>Note on Layouts:</strong> Depending on your device and screen size, the GameTracker display may look slightly different.
+					<ul>
+						<li>On wide desktop screens, the Events List appears <strong>beside</strong> the rink.</li>
+						<li>On tablets or smaller laptops, the Events List may appear <strong>below</strong> the rink.</li>
+						<li>Mobile phones use a completely different "Focus Mode" optimized for touchscreens.</li>
+					</ul>
+				</div>
+                <div class="screenshot-placeholder">
+                    <img src="images/GTReady.png" alt="A screenshot of the full GameTracker interface with the main areas labeled.">
+                    <span>The Main Interface</span>
+                </div>
+            </section>
+
+            <section id="tracking">
+                <h2>Part 3: How to Track Events</h2>
+                <p>Tracking follows a simple workflow: <strong>Click the Rink → Select the Player → Select the Action.</strong></p>
+
+                <h3>Tracking Shots, Goals, Misses, and Posts</h3>
+                <p>After clicking the rink, selecting a player (or the red Opponent button), and choosing the shot type, a <strong>Net Location</strong> popup will appear for SHOTS and GOALS. Click on the net where the shot went to record its location.</p>
+                <div class="screenshot-placeholder">
+                    <img src="images/SelectPlayer.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+					<span>Choose the player</span>
+                </div>
+				<div class="screenshot-placeholder">
+					<img src="images/SelectAction.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+					<span>Choose the Action</span>
+                </div>
+				<div class="screenshot-placeholder">
+					<span>Shot/Goal Locations</span>
+					<img src="images/ShotLocation.png" alt="A screenshot showing the
+					sequence of popups for tracking a shot.">
+					<span>Miss Locations</span>
+					<img src="images/MissLocation.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+					<span>Post Locations</span>
+					<img src="images/PostLocation.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+                    <span>Choose the shot location on net (Optional)</span>
+                </div>
+
+				<h3>Tracking Faceoffs</h3>
+					<ol>
+						<li>Click the dedicated <strong>Faceoff button</strong>.</li>
+						<li>Select the player taking the faceoff.</li>
+						<li>An overlay with WIN/LOSS buttons will appear over the 5 main faceoff zones.</li>
+						<li>Click <strong>WIN</strong> or <strong>LOSS</strong> in the appropriate zone to record the outcome.</li>
+					</ol>
+					<p>All neutral zone faceoffs should be recorded using the <strong>center ice</strong> WIN/LOSS buttons.</p>
+					<div class="tip-box">
+						<strong>Automatic Zone Detection:</strong> As your team and the opponent take shots, GameTracker will automatically learn which end is your offensive zone and which is your defensive zone for the period. Faceoff events will then be updated to reflect this (e.g., "OFF FO", "DEF FO").
+					</div>
+					<div class="screenshot-placeholder">
+						<img src="images/FaceoffOverlay.png" alt="A screenshot of the faceoff overlay with WIN/LOSS buttons on the rink.">
+						<span>Faceoff Overlay</span>
+					</div>
+
+                <h3>Tracking Penalties & Game Situations</h3>
+                <p>When you log a penalty, the <a href="#glossary-game-situation"><strong>Game Situation</strong></a> will automatically change. However, you must manually change it back when the penalty expires.</p>
+            </section>
+
+            <section id="managing">
+                <h2>Part 4: Managing a Game in Progress</h2>
+                
+                <h3>Editing and Deleting Events</h3>
+                <p>In the Events List, click the <strong>pencil icon (✏️)</strong> to edit an event or the <strong>trash can icon (🗑️)</strong> to delete one.</p>
+                <div class="screenshot-placeholder">
+                    <img src="images/GameEvents.png" alt="A screenshot of the Events List with edit and delete icons circled.">
+                    <span>Editing Events</span>
+                </div>
+
+                <h3>Changing the Goalie</h3>
+                <p>Click the "In Net" display in the header to open the goalie selection popup and make a change.</p>
+            </section>
+            
+            <section id="post-game">
+                <h2>Part 5: After the Game</h2>
+
+                <h3>Finalizing a Game</h3>
+                <p>Once the game is over, click the <strong>"Finalize"</strong> button in the events table header. This locks the game from further editing and makes it available in Analytics. A coach or owner can un-finalize it if changes are needed later.</p>
+                <div class="screenshot-placeholder">
+                    <img src="images/Finalize.png" alt="A screenshot of the Finalize checkbox and confirmation popup.">
+                    <span>Finalizing the Game</span>
+                </div>
+            </section>
+
+            <section id="strategies">
+                <h2>Part 6: Strategies for Effective Tracking</h2>
+                <div class="tip-box">
+                  <strong>💡 Pro Tip: Batch Your Events!</strong> During heavy action, remember 2-3 events. At the next whistle, quickly log all of them. Accuracy is more important than real-time speed.
+                </div>
+				
+				<h3>Collaborative Tracking (Team Tracking)</h3>
+				<p>It's possible for multiple people to track the same game simultaneously to capture more detail. If you use this method, divide the responsibilities clearly before the game starts.</p>
+				<p><strong>Example Division of Labor:</strong></p>
+				<ul>
+					<li><strong>Tracker 1 (Primary):</strong> Focuses solely on all shot events (Shots, Goals, Misses, Posts) and all <strong>Penalties</strong>. Tracking penalties is crucial for this role to maintain the correct Power Play (PP) and Penalty Kill (PK) game situation for everyone.</li>
+					<li><strong>Tracker 2 (Secondary):</strong> Focuses on other events like Takeaways, Giveaways, Hits, and Blocks.</li>
+				</ul>
+
+				<div class="tip-box">
+				  <strong>⚠️ Critical Warning:</strong> If you are tracking with a partner, you <strong>must</strong> ensure you are both tracking your team's offensive and defensive zones on the same side of the ice. Communicate before the game and at the start of each period to confirm which end your team is attacking.
+				</div>
+            </section>
+
+            <section id="glossary">
+                <h2>Glossary of Terms</h2>
+                <dl>
+                    <dt id="glossary-game-situation">Game Situation</dt>
+                    <dd>Refers to the on-ice strength of the teams, such as 5v5 (even strength), 5v4 (power play), or 4v5 (penalty kill).</dd>
+                    
+                    <dt id="glossary-offsetting-penalty">Offsetting Penalty</dt>
+                    <dd>When a player from each team receives a penalty at the same time, resulting in no change to the on-ice player count (e.g., play remains 5v5).</dd>
+
+                    <dt id="glossary-finalize">Finalize</dt>
+                    <dd>The act of locking a game's data after it has concluded. This prevents further edits and makes the game's statistics available for analysis.</dd>
+                </dl>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Your Team Name - GameTracker Guide</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
