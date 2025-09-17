@@ -14,7 +14,7 @@
     <div class="container">
         <header>
 			<img src="images/HockEyeLogoText.png" alt="HockEye Logo" class="logo">
-            <h1>GameTracker User Guide 🏒</h1>
+            <h1>GameTracker User Guide</h1>
             <p class="intro">Welcome! This guide will walk you through everything you need to know to accurately track game events and provide valuable data for your team.</p>
         </header>
 
@@ -85,7 +85,7 @@
 				 <div class="tip-box">
 					<strong>Note on Layouts:</strong> Depending on your device and screen size, the GameTracker display may look slightly different.
 					<ul>
-						<li>On wide desktop screens, the Events List appears <strong>beside</strong> the rink.</li>
+						<li>On wider screens, the Events List appears <strong>beside</strong> the rink.</li>
 						<li>On tablets or smaller laptops, the Events List may appear <strong>below</strong> the rink.</li>
 						<li>Mobile phones use a completely different "Focus Mode" optimized for touchscreens.</li>
 					</ul>
@@ -101,7 +101,9 @@
                 <p>Tracking follows a simple workflow: <strong>Click the Rink → Select the Player → Select the Action.</strong></p>
 
                 <h3>Tracking Shots, Goals, Misses, and Posts</h3>
-                <p>After clicking the rink, selecting a player (or the red Opponent button), and choosing the shot type, a <strong>Net Location</strong> popup will appear for SHOTS and GOALS. Click on the net where the shot went to record its location.</p>
+                <p>After clicking the rink, select the player who performed the action. Choose a player from your team, or select the red <strong>'Opponent'</strong> button to track any event caused by the other team.</p>
+
+				<p>Next, choose the shot type (<strong>SHOT, GOAL, MISS,</strong> or <strong>POST</strong>). If "Shot Location" is enabled in your team's settings, a <strong>Net Location</strong> popup will then appear. Click on the net where the shot went to record its location.</p>	
                 <div class="screenshot-placeholder">
                     <img src="images/SelectPlayer.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
 					<span>Choose the player</span>
@@ -142,10 +144,16 @@
             </section>
 
             <section id="managing">
-                <h2>Part 4: Managing a Game in Progress</h2>
-                
-                <h3>Editing and Deleting Events</h3>
-                <p>In the Events List, click the <strong>pencil icon (✏️)</strong> to edit an event or the <strong>trash can icon (🗑️)</strong> to delete one.</p>
+				<h2>Part 4: Managing a Game in Progress</h2>
+				
+				<h3>Editing and Deleting Events</h3>
+				<p>In the Events List, you can click the <strong>pencil icon (✏️)</strong> to edit a player or game situation, or the <strong>trash can icon (🗑️)</strong> to delete an event entirely.</p>
+				
+				<p>You can also quickly edit certain events by clicking directly on the event row itself:</p>
+				<ul>
+					<li>Clicking any <strong>shot-type event</strong> (Shot, Goal, Miss, Post) will bring up the Net Location editor (if it's being tracked), allowing you to modify the shot's location on the net.</li>
+					<li>Clicking a <strong>Faceoff</strong> event will bring up the faceoff overlay, allowing you to change its location or result (Win/Loss).</li>
+				</ul>
                 <div class="screenshot-placeholder">
                     <img src="images/GameEvents.png" alt="A screenshot of the Events List with edit and delete icons circled.">
                     <span>Editing Events</span>
@@ -174,11 +182,16 @@
 				
 				<h3>Collaborative Tracking (Team Tracking)</h3>
 				<p>It's possible for multiple people to track the same game simultaneously to capture more detail. If you use this method, divide the responsibilities clearly before the game starts.</p>
-				<p><strong>Example Division of Labor:</strong></p>
+
+				<h4>Example Division of Labor:</h4>
 				<ul>
-					<li><strong>Tracker 1 (Primary):</strong> Focuses solely on all shot events (Shots, Goals, Misses, Posts) and all <strong>Penalties</strong>. Tracking penalties is crucial for this role to maintain the correct Power Play (PP) and Penalty Kill (PK) game situation for everyone.</li>
+					<li><strong>Tracker 1 (Primary):</strong> Focuses on all shot events (Shots, Goals, Misses, Posts) and Faceoffs.</li>
 					<li><strong>Tracker 2 (Secondary):</strong> Focuses on other events like Takeaways, Giveaways, Hits, and Blocks.</li>
 				</ul>
+
+				<div class="tip-box">
+					<strong>⚠️ Critical Warning:</strong> Regardless of how you divide the tasks, it is essential that your team logs all <strong>Penalties</strong> accurately. When one person enters a penalty, the game situation (e.g., 5v4 PP) updates for <strong>everyone</strong> tracking the game. This ensures all events are marked with the proper on-ice situation, which is vital for accurate analysis. Remember to also manually reset the game situation when the penalty expires.
+				</div>
 
 				<div class="tip-box">
 				  <strong>⚠️ Critical Warning:</strong> If you are tracking with a partner, you <strong>must</strong> ensure you are both tracking your team's offensive and defensive zones on the same side of the ice. Communicate before the game and at the start of each period to confirm which end your team is attacking.
