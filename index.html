@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTracker User Guide</title>
+    <title>HockEye User Guide</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,52 +14,143 @@
     <div class="container">
         <header>
 			<img src="images/HockEyeLogoText.png" alt="HockEye Logo" class="logo">
-            <h1>GameTracker User Guide</h1>
-            <p class="intro">Welcome! This guide will walk you through everything you need to know to accurately track game events and provide valuable data for your team.</p>
+            <h1>HockEye User Guide</h1>
+            <p class="intro">Welcome! This guide will walk you through everything you need to know to manage your team and track game events effectively.</p>
         </header>
 
         <nav class="toc">
             <h2>Table of Contents</h2>
             <ul>
-                <li><a href="#settings">Important First Step: Team Settings</a></li>
-                <li><a href="#setup">Part 1: Pre-Game Setup</a></li>
-                <li><a href="#interface">Part 2: The Tracking Interface</a></li>
-                <li><a href="#tracking">Part 3: How to Track Events</a></li>
-                <li><a href="#managing">Part 4: Managing a Game in Progress</a></li>
-                <li><a href="#post-game">Part 5: After the Game</a></li>
-                <li><a href="#strategies">Part 6: Strategies for Effective Tracking</a></li>
+                <li><a href="#team-setup">Part 1: Team Setup (Owner/Admin)</a>
+                    <ul>
+                        <li><a href="#team-info">Team Info</a></li>
+                        <li><a href="#team-roster">Roster</a></li>
+						<li><a href="#team-staff">Staff</a></li>
+                        <li><a href="#team-lines">Lines</a></li>
+                        <li><a href="#team-schedule">Schedule</a></li>
+                    </ul>
+                </li>
+                <li><a href="#gametracker">Part 2: GameTracker Guide</a></li>
+                <li><a href="#shot-chart">Part 3: Shot Chart</a></li>
+                <li><a href="#stats">Part 4: Stats</a></li>
                 <li><a href="#glossary">Glossary of Terms</a></li>
             </ul>
         </nav>
 
         <main>
-            <section id="settings">
-                <h2>Important First Step: Team Management Settings</h2>
-                <p>Before you start tracking, it's crucial to understand that the features available within GameTracker are controlled by the <strong>Team Management</strong> settings. Your team owner can decide which events to track (e.g., Hits, Blocks, Assists). If you don't see an option for an action, it's likely disabled in the team settings.</p>
+            <section id="team-setup">
+                <h2>Part 1: Team Setup (Owner/Admin)</h2>
+                <p>This section covers the core administrative features for managing your team's information, roster, and schedule.</p>
+
+                <hr style="margin: 2rem 0;">
+
+                <h3 id="team-info">Team Info</h3>
+                <p>This is where you set your team's identity.</p>
+                <ul>
+                    <li><strong>Team Details:</strong> Add your team's city and name, upload a logo, and set your primary, secondary, and tertiary team colors.</li>
+                    <li><strong>Use Lines:</strong> Toggling this "On" makes the <strong>Lines</strong> tab available in the Team Manager. This provides an alternative, visual way for coaches to set the game roster using line combinations.</li>
+                    <li><strong>GameTracker Settings:</strong> This allows you to enable or disable the tracking of optional events like Hits, Blocks, Takeaways, etc. Mandatory events (Shots, Goals, Misses, Posts) cannot be disabled.</li>
+					<li><strong>League Integration:</strong> This feature allows you to specify your league's standings webpage URL. When set, the standings will be displayed embedded directly within the HockEye site.</li>
+                </ul>
+				<div class="tip-box">
+                    <strong>💡 Pro Tip:</strong> When your team is at a tournament, you can temporarily change the Standings Page URL to the tournament's website to easily keep track of the standings.
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="images/TeamInfo.png" alt="A screenshot of the Team Info settings page.">
+                    <span>Team Info Panel</span>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+
+                <h3 id="team-roster">Roster</h3>
+                <p>Manage your list of players for the season.</p>
+                <ul>
+                    <li><strong>Player Creation:</strong> Add new players by providing their jersey number, name, and position. You can also add detailed contact and biographical information.</li>
+                    <li><strong>Player Analytics:</strong> Click on any player to view their detailed analytics. The data shown is based on the currently selected game filters (e.g., Full Season, Last 5 Games).</li>
+                    <li><strong>Import Roster:</strong> Quickly populate your roster by uploading a CSV file. The app uses smart logic to automatically map columns like "Jersey #", "Last Name", etc., and allows you to review and adjust mappings before the final import.</li>
+                </ul>
+                <div class="screenshot-placeholder">
+                    <img src="images/PlayerRoster.png" alt="A screenshot of the Roster management screen with a player selected.">
+                    <span>Roster & Player Analytics View</span>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+				
+				<h3 id="team-staff">Staff</h3>
+                <p>Manage your coaches, managers, and other team staff. Granting staff access is a two-step process.</p>
                 
+				<h4>Step 1: Add a Staff Member</h4>
+				<p>First, add the individual to your staff list by providing their name and role (e.g., Head Coach, Manager). At this stage, they are listed as staff but do not yet have access to the app.</p>
+
+				<h4>Step 2: Grant App Access</h4>
+				<p>After adding the staff member, edit their record to grant them access to the HockEye application. You will assign them one of the following roles:</p>
+				<ul>
+					<li><strong>Assistant Coach:</strong> Has full access to manage the team, schedule, roster, and track games. Can also view all analytics.</li>
+					<li><strong>Tracker:</strong> Can track games using GameTracker and view analytics, but cannot manage the team roster or schedule.</li>
+					<li><strong>Viewer:</strong> Has read-only access to view stats and shot charts. Cannot track games or manage the team.</li>
+				</ul>
+				<p>Once access is granted, the staff member can sign up on the HockEye website using the same email address. They will automatically be given access to your team with their assigned role.</p>
+
+				<div class="screenshot-placeholder">
+                    <img src="images/StaffAccess.png" alt="A screenshot showing the staff management panel with the access roles dropdown visible.">
+                    <span>Staff Management and Access Roles</span>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+                
+                <h3 id="team-lines">Lines</h3>
+                <p>The Lines manager is a visual tool primarily used as an alternative way for coaches to set the <strong>game roster</strong>. There is currently no data or tracking associated with specific line combinations.</p>
+                 <ul>
+                    <li><strong>Current vs. Default:</strong> "Current Lines" are the lines for a specific, upcoming game. "Default Lines" are your go-to combinations that you can quickly load into the "Current" view to save time.</li>
+					<li><strong>Handedness Indicator:</strong> If a player's handedness (Left/Right) is defined in their roster profile, the edges of their player box in the Lines manager will be highlighted in blue to reflect that.</li>
+                </ul>
+                <div class="screenshot-placeholder">
+                    <img src="images/Lines.png" alt="A screenshot of the Lines manager interface.">
+                    <span>Lines Manager</span>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+
+                <h3 id="team-schedule">Schedule</h3>
+                <p>Manage your team's calendar of games for the season.</p>
+                 <ul>
+                    <li><strong>Add/Import Games:</strong> You can add games manually one by one, or import an entire season's schedule from a CSV file using the smart mapping tool.</li>
+                    <li><strong>Set Game Roster:</strong> Before a game, you must set the roster. You can do this from the schedule by either using the <strong>Lines</strong> manager (if enabled) or the standard <strong>Roster</strong> screen, where non-affiliated players are automatically pre-selected.</li>
+                    <li><strong>Finalize (Lock/Unlock) Games:</strong> After a game is tracked, it should be "Finalized". This locks the game from further edits and makes its data available in the aggregate stats views. A coach or owner can unlock a game if corrections are needed.</li>
+                </ul>
+                 <div class="screenshot-placeholder">
+                    <img src="images/Schedule.png" alt="A screenshot of the Schedule view with options to edit and finalize a game.">
+                    <span>Schedule Management</span>
+                </div>
+            </section>
+
+            <hr style="margin: 3rem 0;">
+
+            <section id="gametracker">
+                <h2>Part 2: GameTracker Guide</h2>
+                <p>This tool is designed to help you capture important game events quickly and accurately, providing valuable data for your coaches and players.</p>
+                
+                <h3 id="settings">Important First Step: Team Settings</h3>
+                <p>Before you start tracking, it's crucial to understand that the features available within GameTracker are controlled by the <strong>Team Management</strong> settings. Your team owner can decide which events to track (e.g., Hits, Blocks, Assists). If you don't see an option for an action, it's likely disabled in the team settings.</p>
                 <div class="screenshot-placeholder">
                     <img src="images/GTSettings.png" alt="A screenshot showing the Team Management settings page with toggles for tracked actions.">
                     <span>Team Management Settings</span>
                 </div>
-            </section>
             
-            <section id="setup">
-                <h2>Part 1: Pre-Game Setup</h2>
+                <h3 id="setup">Pre-Game Setup</h3>
                 <p>Follow these steps before the puck drops to ensure a smooth tracking experience.</p>
                 
-                <h3>1. Select Your Game</h3>
+                <h4>1. Select Your Game</h4>
                 <p>From the main dropdown menu, choose the game you are about to track. Only games that have <strong>not</strong> been finalized will appear here.</p>
                 <div class="screenshot-placeholder">
                     <img src="images/SelectGame.png"  alt="A screenshot of the game selection dropdown menu.">
                     <span>Game Selection Dropdown</span>
                 </div>
-
-				<div class="tip-box">
+                <div class="tip-box">
 					<strong>Already Set Up?</strong> If you select a game and are taken directly to the rink without seeing the popups below, it means the coach has already set the roster and goalie. You can proceed directly to tracking!
 				</div>
 
-
-                <h3>2. Set the Game Roster</h3>
+                <h4>2. Set the Game Roster</h4>
                 <p>When you select a game for the first time, a <strong>Roster Setup</strong> screen will appear. You can select primary and affiliate players. Click <strong>"Set Roster"</strong> to confirm.</p>
                 <div class="tip-box">
                     <strong>Note:</strong> You can add players to the roster mid-game, but you <strong>cannot remove</strong> them. This must be done by the account owner.
@@ -69,19 +160,15 @@
                     <span>Roster Setup Screen</span>
                 </div>
                 
-                <h3>3. Select the Starting Goalie</h3>
+                <h4>3. Select the Starting Goalie</h4>
                 <p>After the roster is set, you must select the starting goalie or "Empty Net". Tracking cannot begin until a goalie is selected.</p>
                 <div class="screenshot-placeholder">
                     <img src="images/SetGoalie.png"  alt="A screenshot of the goalie selection popup.">
                     <span>Goalie Selection</span>
                 </div>
 
-            </section>
-
-            <section id="interface">
-                <h2>Part 2: The Tracking Interface</h2>
+                <h3 id="interface">The Tracking Interface</h3>
                 <p>The main screen consists of three key areas: the Rink, the Controls, and the Events List.</p>
-				
 				 <div class="tip-box">
 					<strong>Note on Layouts:</strong> Depending on your device and screen size, the GameTracker display may look slightly different.
 					<ul>
@@ -94,109 +181,78 @@
                     <img src="images/GTReady.png" alt="A screenshot of the full GameTracker interface with the main areas labeled.">
                     <span>The Main Interface</span>
                 </div>
-            </section>
 
-            <section id="tracking">
-                <h2>Part 3: How to Track Events</h2>
+                <h3 id="tracking">How to Track Events</h3>
                 <p>Tracking follows a simple workflow: <strong>Click the Rink → Select the Player → Select the Action.</strong></p>
 
-                <h3>Tracking Shots, Goals, Misses, and Posts</h3>
+                <h4>Tracking Shots, Goals, Misses, and Posts</h4>
                 <p>After clicking the rink, select the player who performed the action. Choose a player from your team, or select the red <strong>'Opponent'</strong> button to track any event caused by the other team.</p>
-
 				<p>Next, choose the shot type (<strong>SHOT, GOAL, MISS,</strong> or <strong>POST</strong>). If "Shot Location" is enabled in your team's settings, a <strong>Net Location</strong> popup will then appear. Click on the net where the shot went to record its location.</p>	
                 <div class="screenshot-placeholder">
-                    <img src="images/SelectPlayer.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+					<img src="images/SelectPlayer.png" alt="A screenshot of the player selection screen.">
 					<span>Choose the player</span>
                 </div>
 				<div class="screenshot-placeholder">
-					<img src="images/SelectAction.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
+					<img src="images/SelectAction.png" alt="A screenshot of the action selection screen.">
 					<span>Choose the Action</span>
                 </div>
-				<div class="screenshot-placeholder">
-					<span>Shot/Goal Locations</span>
-					<img src="images/ShotLocation.png" alt="A screenshot showing the
-					sequence of popups for tracking a shot.">
-					<span>Miss Locations</span>
-					<img src="images/MissLocation.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
-					<span>Post Locations</span>
-					<img src="images/PostLocation.png" alt="A screenshot showing the sequence of popups for tracking a shot.">
-                    <span>Choose the shot location on net (Optional)</span>
+
+				<h4>Tracking Faceoffs</h4>
+                <p>All neutral zone faceoffs should be recorded using the <strong>center ice</strong> WIN/LOSS buttons.</p>
+                <div class="tip-box">
+                    <strong>Automatic Zone Detection:</strong> As your team and the opponent take shots, GameTracker will automatically learn which end is your offensive zone and which is your defensive zone for the period. Faceoff events will then be updated to reflect this (e.g., "OFF FO", "DEF FO").
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="images/FaceoffOverlay.png" alt="A screenshot of the faceoff overlay with WIN/LOSS buttons on the rink.">
+                    <span>Faceoff Overlay</span>
                 </div>
 
-				<h3>Tracking Faceoffs</h3>
-					<ol>
-						<li>Click the dedicated <strong>Faceoff button</strong>.</li>
-						<li>Select the player taking the faceoff.</li>
-						<li>An overlay with WIN/LOSS buttons will appear over the 5 main faceoff zones.</li>
-						<li>Click <strong>WIN</strong> or <strong>LOSS</strong> in the appropriate zone to record the outcome.</li>
-					</ol>
-					<p>All neutral zone faceoffs should be recorded using the <strong>center ice</strong> WIN/LOSS buttons.</p>
-					<div class="tip-box">
-						<strong>Automatic Zone Detection:</strong> As your team and the opponent take shots, GameTracker will automatically learn which end is your offensive zone and which is your defensive zone for the period. Faceoff events will then be updated to reflect this (e.g., "OFF FO", "DEF FO").
-					</div>
-					<div class="screenshot-placeholder">
-						<img src="images/FaceoffOverlay.png" alt="A screenshot of the faceoff overlay with WIN/LOSS buttons on the rink.">
-						<span>Faceoff Overlay</span>
-					</div>
-
-                <h3>Tracking Penalties & Game Situations</h3>
-                <p>When you log a penalty, the <a href="#glossary-game-situation"><strong>Game Situation</strong></a> will automatically change. However, you must manually change it back when the penalty expires.</p>
-            </section>
-
-            <section id="managing">
-				<h2>Part 4: Managing a Game in Progress</h2>
-				
-				<h3>Editing and Deleting Events</h3>
+                <h3 id="managing">Managing a Game in Progress</h3>
+				<h4>Editing and Deleting Events</h4>
 				<p>In the Events List, you can click the <strong>pencil icon (✏️)</strong> to edit a player or game situation, or the <strong>trash can icon (🗑️)</strong> to delete an event entirely.</p>
-				
 				<p>You can also quickly edit certain events by clicking directly on the event row itself:</p>
 				<ul>
-					<li>Clicking any <strong>shot-type event</strong> (Shot, Goal, Miss, Post) will bring up the Net Location editor (if it's being tracked), allowing you to modify the shot's location on the net.</li>
-					<li>Clicking a <strong>Faceoff</strong> event will bring up the faceoff overlay, allowing you to change its location or result (Win/Loss).</li>
+					<li>Clicking any <strong>shot-type event</strong> will bring up the Net Location editor (if tracked), allowing you to modify the shot's location on the net.</li>
+					<li>Clicking a <strong>Faceoff</strong> event will bring up the faceoff overlay, allowing you to change its location or result.</li>
 				</ul>
                 <div class="screenshot-placeholder">
                     <img src="images/GameEvents.png" alt="A screenshot of the Events List with edit and delete icons circled.">
                     <span>Editing Events</span>
                 </div>
-
-                <h3>Changing the Goalie</h3>
-                <p>Click the "In Net" display in the header to open the goalie selection popup and make a change.</p>
             </section>
             
-            <section id="post-game">
-                <h2>Part 5: After the Game</h2>
+            <hr style="margin: 3rem 0;">
 
-                <h3>Finalizing a Game</h3>
-                <p>Once the game is over, click the <strong>"Finalize"</strong> button in the events table header. This locks the game from further editing and makes it available in Analytics. A coach or owner can un-finalize it if changes are needed later.</p>
+            <section id="shot-chart">
+                <h2>Part 3: Shot Chart</h2>
+                <p>The Shot Chart provides a visual representation of all shot-related events for a selected game.</p>
+                <ul>
+                    <li><strong>Flip View:</strong> If the person tracking the game was on the opposite side of the ice from the coach's perspective, the <strong>Flip View</strong> button will correct the orientation, making the chart easier to analyze.</li>
+                    <li><strong>Dynamic Filtering:</strong> The filter options (Periods, Actions, Game Situation) are dynamic. They only show options that are relevant to the data in the selected game. For example, if no penalties were recorded, "Power Play" will not appear as a filter option.</li>
+					<li><strong>Action Details:</strong> Clicking on any action's icon on the rink or net will highlight it and display its details, such as the player, period, and game situation.</li>
+                </ul>
                 <div class="screenshot-placeholder">
-                    <img src="images/Finalize.png" alt="A screenshot of the Finalize checkbox and confirmation popup.">
-                    <span>Finalizing the Game</span>
+                    <img src="images/ShotChart.png" alt="A screenshot of the Shot Chart view with filters and the Flip View button highlighted.">
+                    <span>Shot Chart Interface</span>
                 </div>
             </section>
 
-            <section id="strategies">
-                <h2>Part 6: Strategies for Effective Tracking</h2>
-                <div class="tip-box">
-                  <strong>💡 Pro Tip: Batch Your Events!</strong> During heavy action, remember 2-3 events. At the next whistle, quickly log all of them. Accuracy is more important than real-time speed.
+            <hr style="margin: 3rem 0;">
+
+            <section id="stats">
+                <h2>Part 4: Stats</h2>
+                <p>The Stats section provides detailed breakdowns of team and player performance.</p>
+                 <ul>
+                    <li><strong>Data Aggregation:</strong> You can view stats for the full season, the last number of games, a specific game, or by game type (e.g., Regular Season, Playoffs).</li>
+                    <li><strong>Danger Zones:</strong> Shots are categorized into High, Mid, and Low danger zones based on their location on the ice. This helps coaches understand the quality of chances for and against.</li>
+                </ul>
+                 <div class="screenshot-placeholder">
+                    <img src="images/DangerZones.png" alt="A diagram of the ice showing High, Mid, and Low danger zones.">
+                    <span>Danger Zone Map</span>
                 </div>
-				
-				<h3>Collaborative Tracking (Team Tracking)</h3>
-				<p>It's possible for multiple people to track the same game simultaneously to capture more detail. If you use this method, divide the responsibilities clearly before the game starts.</p>
-
-				<h4>Example Division of Labor:</h4>
-				<ul>
-					<li><strong>Tracker 1 (Primary):</strong> Focuses on all shot events (Shots, Goals, Misses, Posts) and Faceoffs.</li>
-					<li><strong>Tracker 2 (Secondary):</strong> Focuses on other events like Takeaways, Giveaways, Hits, and Blocks.</li>
-				</ul>
-
-				<div class="tip-box">
-					<strong>⚠️ Critical Warning:</strong> Regardless of how you divide the tasks, it is essential that your team logs all <strong>Penalties</strong> accurately. When one person enters a penalty, the game situation (e.g., 5v4 PP) updates for <strong>everyone</strong> tracking the game. This ensures all events are marked with the proper on-ice situation, which is vital for accurate analysis. Remember to also manually reset the game situation when the penalty expires.
-				</div>
-
-				<div class="tip-box">
-				  <strong>⚠️ Critical Warning:</strong> If you are tracking with a partner, you <strong>must</strong> ensure you are both tracking your team's offensive and defensive zones on the same side of the ice. Communicate before the game and at the start of each period to confirm which end your team is attacking.
-				</div>
             </section>
+
+             <hr style="margin: 3rem 0;">
 
             <section id="glossary">
                 <h2>Glossary of Terms</h2>
@@ -214,7 +270,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2025 HockEye - GameTracker Guide</p>
+            <p>&copy; 2025 HockEye - User Guide</p>
         </footer>
 
     </div>

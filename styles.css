@@ -79,6 +79,13 @@ strong {
 	margin-bottom: 40px;
 }
 
+/* Target the nested list within the Table of Contents */
+.toc ul li ul {
+	padding-left: 25px; /* Adds the indentation */
+	margin-top: 8px; /* Adds a little space above the sub-list */
+	list-style-type: circle; /* Changes the bullet style for visual distinction */
+}
+
 .toc ul {
 	list-style-type: none;
 	padding-left: 0;
